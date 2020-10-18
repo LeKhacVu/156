@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <p class="m-0">Quản lý sản phẩm</p>
+        </div>
+        <div class="card-body">
+            <div class="d-flex">
+                <input type="text" class="form-control mr-2" placeholder="MaSP" [(ngModel)]="prodId" />
+                <input type="text" class="form-control mr-2" placeholder="TenSp" [(ngModel)]="prodName" />
+                <input type="text" class="form-control mr-2" placeholder="GiaSP" [(ngModel)]="price" />
+                <button (click)="addProduct()" class="btn btn-success">Thêm sản phẩm</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <p class="m-0">Danh sách sản phẩm</p>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Giá</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr [ngClass]="{highlight:prod.MaSP === selectedProd?.MaSP}" (click)="selectProduct(prod)"
+                        *ngFor="let prod of products; let i = index" class="text-primary">
+                        <td>{{i+1}}</td>
+                        <td>{{prod.MaSP}}</td>
+                        <td>{{prod.TenSP}}</td>
+                        <td>{{prod.Gia}}</td>
+                        <td>
+                            <button (click)="deleteProd(prod.MaSP)" class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

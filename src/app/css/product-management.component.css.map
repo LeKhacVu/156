@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,gBAAgB,EAAE,KAAK;CAC1B",
+    "sources": [
+        "../product-management/product-management.component.scss"
+    ],
+    "names": [],
+    "file": "product-management.component.css"
+}

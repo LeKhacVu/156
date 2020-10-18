@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <h1 class="display-4">Student List</h1>
+            <div class="row">
+                <div class="col-4" *ngFor="let student of studentList">
+                    <app-student-item [item]="student"></app-student-item>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <h1 class="display-4">Select Student List</h1>
+            <p class="lead" *ngFor="let student of selectedStudent">
+            1.Lê Khắc Vũ - 13VLH1
+            <span class="text-warning">[Xóa]</span>
+        </p>
+        </div>
+    </div>
+</div>

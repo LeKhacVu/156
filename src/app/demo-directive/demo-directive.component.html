@@ -1,0 +1,29 @@
+<!--=========*ngIf==========-->
+<!-- <button (click)="makeDecision(true)">Fine</button>
+<button (click)="makeDecision(false)">Sick</button>
+
+<p *ngIf="isFine; else elseContent">Go to CyberSoft</p>
+<!-- <p *ngIf="!isFine">Go To CyberCore</p> -->
+<!-- <ng-template #elseContent>
+    <p>Go To Cybercore</p>
+    <p>Fine Again</p>
+</ng-template> -->
+
+<!--=========*ngSwitch==========-->
+
+<select (change)="selectMonth($event)">
+    <option *ngFor="let item of monthOptions" [value]="item.value">
+        {{item.title}}
+    </option>
+
+</select>
+
+
+<div [ngSwitch]="month" class="text-center display-4">
+    <p *ngSwitchCase="1">Tháng 1 có 31 ngày</p>
+    <p *ngSwitchCase="2">Tháng 2 có 28 ngày</p>
+    <p *ngSwitchCase="3">Tháng 3 có 31 ngày</p>
+    <p *ngSwitchCase="4">Tháng 4 có 30 ngày</p>
+    <p *ngSwitchCase="5">Tháng 5 có 30 ngày</p>
+    <p *ngSwitchDefault>Không biết!</p>
+</div>
